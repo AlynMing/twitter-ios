@@ -173,13 +173,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="0" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="KSX-hY-r2O" userLabel="characterCount">
+                                <rect key="frame" x="321" y="192" width="54" height="41"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AuG-wM-kbA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KSX-hY-r2O" firstAttribute="top" secondItem="H8b-0G-bme" secondAttribute="bottom" constant="8" symbolic="YES" id="2ZL-oV-xc4"/>
+                            <constraint firstItem="AuG-wM-kbA" firstAttribute="trailing" secondItem="KSX-hY-r2O" secondAttribute="trailing" id="IGF-nd-Xo6"/>
                             <constraint firstItem="H8b-0G-bme" firstAttribute="top" secondItem="AuG-wM-kbA" secondAttribute="top" id="Nca-eq-EAV"/>
+                            <constraint firstItem="AuG-wM-kbA" firstAttribute="bottom" secondItem="KSX-hY-r2O" secondAttribute="bottom" constant="414" id="ajo-d5-iSX"/>
                             <constraint firstItem="H8b-0G-bme" firstAttribute="leading" secondItem="AuG-wM-kbA" secondAttribute="leading" id="gOI-Ib-Axo"/>
                             <constraint firstItem="AuG-wM-kbA" firstAttribute="trailing" secondItem="H8b-0G-bme" secondAttribute="trailing" id="pNJ-IL-uyc"/>
+                            <constraint firstItem="KSX-hY-r2O" firstAttribute="leading" secondItem="AuG-wM-kbA" secondAttribute="leading" constant="321" id="qCS-Ku-bRZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="omy-B2-Ulo">
@@ -197,6 +208,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="charCountTextView" destination="KSX-hY-r2O" id="PP7-xE-KPh"/>
                         <outlet property="tweetTextView" destination="H8b-0G-bme" id="vvb-Ck-OKk"/>
                     </connections>
                 </viewController>
